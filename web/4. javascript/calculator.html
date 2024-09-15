@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="blue" text"white">
+    <h1>BASIC CALCULATOR</h1>
+    <input id="inpuId" type="text"><br>
+    <button onclick="takeInput('7')">7</button>
+    <button onclick="takeInput('8')">8</button>
+    <button onclick="takeInput('9')">9</button>
+    <button onclick="takeInput('/')">/</button>
+    <br>
+    <button onclick="takeInput('4')">4</button>
+    <button onclick="takeInput('5')">5</button>
+    <button onclick="takeInput('6')">6</button>
+    <button onclick="takeInput('*')">*</button>
+    <br>
+    <button onclick="takeInput('1')">1</button>
+    <button onclick="takeInput('2')">2</button>
+    <button onclick="takeInput('3')">3</button>
+    <button onclick="takeInput('-')">-</button>
+    <br>
+    <button onclick="takeInput('0')">0</button>
+    <button onclick="takeInput('.')">.</button>
+    <button onclick="clearInput()">C</button>
+    <button onclick="calculate()">=</button>
+
+    <br>
+    
+
+    <script>
+       function takeInput(value){
+        document.getElementById("inpuId").value += value
+       }
+       function clearInput(){
+        document.getElementById("inpuId").value = ""
+       }
+       function calculate(){
+        document.getElementById("inpuId").value = eval(document.getElementById("inpuId").value)
+       }
+
+    </script>
+    
+</body>
+</html>
